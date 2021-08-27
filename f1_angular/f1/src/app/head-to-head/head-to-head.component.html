@@ -1,0 +1,26 @@
+<div class="headToHead">
+    <div class="driverH2H" id="driver1">
+        <select #driver1 id="driverDropdown1" class="blackFont">
+            <option *ngFor="let d of drivers" [value]="d.id">{{ d.forename + ' ' + d.surname }}</option>
+        </select>
+        <select>
+            <option [value]="0">All time</option>
+            <option *ngFor="let y of years" [value]="y">{{ y }}</option>
+        </select>
+    </div>
+    <div class="vl"></div>
+    <div class="driverH2H" id="driver2">
+        <select #driver2 id="driverDropdown2" class="blackFont">
+            <option *ngFor="let d of drivers" [value]="d.id">{{ d.forename + ' ' + d.surname }}</option>
+        </select>
+        <select>
+            <option [value]="0">All time</option>
+            <option *ngFor="let y of years" [value]="y">{{ y }}</option>
+        </select>
+    </div>
+    <!-- <app-h2h-chart></app-h2h-chart> -->
+    <div class="compareButton">
+        <button type="button" class="f1Button" (click)="getDriverDetails(driver1.value, driver2.value)">Compare</button>
+    </div>
+</div>
+

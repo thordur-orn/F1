@@ -1,0 +1,26 @@
+<div class="title f1Font bold">
+  <h2 class="whiteFont">Drivers</h2>
+</div>
+
+<app-driver-search></app-driver-search>
+
+<div class="drivers">
+  <ul class="driverList">
+      <div *ngFor="let driver of drivers">
+          <div class="listPanel whiteFont f1Font" routerLink="/driver/{{driver.id}}">
+            {{driver.forename + ' ' + driver.surname}}
+          </div>
+      </div>
+  </ul>
+</div>
+
+<!--
+  <div>
+  <label id="new-driver">Driver name: </label>
+  <input for="new-driver" #driverName />
+
+  <button class="add-button" (click)="add(driverName.value); driverName.value=''">
+    Add driver
+  </button>
+</div>
+-->

@@ -1,0 +1,29 @@
+.headToHead{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.driverH2H{
+    width: 45%;
+    height: 200px;
+    margin: 10px;
+}
+
+#driver1{
+    text-align: right;
+}
+
+#driver2{
+    text-align: left;
+}
+
+.vl {
+    border-left: 2px solid black;
+    height: 200px;
+}
+
+.compareButton{
+    width: 100%;
+    text-align: center;
+}

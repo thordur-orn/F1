@@ -1,0 +1,54 @@
+.f1Dropdown{
+    border: 1px white;
+    font-size: 20px;
+    background-color: black;
+    font-family: 'Titillium Web', sans-serif;
+    height: 40px;
+    width: 67px;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.f1Option{
+    width: 100px;
+    height: 50px;
+    border-radius: 1px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: auto;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: auto;
+}
+
+.arrowButton{
+    background-color: black;
+    font-family: 'Titillium Web', sans-serif;
+    margin: auto;
+    color: white;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.arrowButton:hover {
+    background-color: #FF1801;
+}

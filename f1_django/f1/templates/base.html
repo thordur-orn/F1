@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Formula 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <div id="head" class="f1Font whiteFont blackColor">
+        <h1>
+            <a class="whiteFont" href={% url "drivers-index" %}>
+                Formula 1
+            </a>
+        </h1>
+    </div>
+        <div id="nav" class="blackColor">
+            <nav>
+                <div class="navItem f1Font whiteFont">
+                    <a class="nav-link" href={% url "drivers-index" %}>Drivers</a>
+                </div>
+                <div class="navItem f1Font whiteFont" >
+                    <a class="nav-link" href={% url "teams-index" %}>Teams</a>
+                </div>
+                <div class="navItem f1Font whiteFont" >
+                    <a class="nav-link" href={% url "circuits-index" %}>Circuits</a>
+                </div>
+                <div class="navItem f1Font whiteFont" >Standings</div>
+                <div class="navItem f1Font whiteFont" >Circuits</div>
+                <div class="navItem f1Font whiteFont" >Statistics</div>
+            </nav>
+        </div>
+
+    <body class="greyColor f1Font whiteFont">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </body>
+</html>

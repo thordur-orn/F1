@@ -1,0 +1,11 @@
+<div class="margin25">
+    <table>
+        <th>Season</th><th>Points</th><th>Wins</th><th>Championship Position</th>
+        <tr *ngFor="let c of constructorSeasons" class="whiteFont">
+            <td><a routerLink="/standings/{{c.year}}" class="whiteFont">{{ c.year }}</a></td>
+            <td>{{ c.points }}</td>
+            <td>{{ c.wins }}</td>
+            <td>{{ c.position | ordinal }}</td>
+        </tr>
+    </table>
+</div>

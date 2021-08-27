@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formula 1</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" sizes="16x16" href="./assets/f1logo.ico"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet"> 
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body class="greyColor" onload=makeDropdown()>
+        <div id="controls" class="flexRow">
+            <div id="dropdown"></div>
+            <div id="getResultsButton"><button type="button" class="f1Button" onclick="getStandingsByYear()">Get standings</button></div>
+            <div id="clearButton"><button type="button" class="f1Button" onclick="clearResults()">Clear</button></div>
+        </div>
+        <div id="tableArea">
+            
+        </div>
+    </body>
+</html>

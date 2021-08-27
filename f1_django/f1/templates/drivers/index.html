@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="title f1Font bold">
+        <h2 class="whiteFont">Drivers</h2>
+    </div>
+    <ul class="driverList">
+        {% for driver in drivers %}
+            <a href={% url "driver-details" driver.id %}>
+                <div class="listPanel whiteFont f1Font">
+                    {{ driver.forename }} {{ driver.surname }}
+                </div>
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock %}

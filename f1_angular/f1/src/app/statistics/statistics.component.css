@@ -1,0 +1,12 @@
+.statsCard{
+    width: 25%;
+    margin-inline: 25px;
+    padding-inline: 20px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}

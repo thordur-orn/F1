@@ -1,0 +1,13 @@
+<div class="constructorStandings">
+    <table>
+        <tr>
+            <th>Pos.</th><th>Constructor</th><th>Points</th><th>Wins</th>
+        </tr>
+        <tr *ngFor = "let c of constructorStandings; let i=index" class="whiteFont">
+            <td>{{ i + 1 }}</td>
+            <td><a routerLink="/team/{{c.teamid}}" class="whiteFont">{{ c.team }}</a></td>
+            <td>{{ c.points }}</td>
+            <td>{{ c.wins }}</td>
+        </tr>
+    </table>
+</div>

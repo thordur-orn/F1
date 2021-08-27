@@ -1,0 +1,10 @@
+<div class="margin25">
+    <table>
+        <th>Season</th><th>Winner</th><th>Constructor</th>
+        <tr *ngFor="let w of winners">
+            <td><a routerLink="/standings/{{w.year}}" class="whiteFont">{{ w.year }}</a></td>
+            <td><a routerLink="/driver/{{w.driverid}}" class="whiteFont">{{ w.forename }} {{ w.surname }}</a></td>
+            <td><a routerLink="/team/{{w.teamid}}" class="whiteFont">{{ w.team }}</a></td>
+        </tr>
+    </table>
+</div>

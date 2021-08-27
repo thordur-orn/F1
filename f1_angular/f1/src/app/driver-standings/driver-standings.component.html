@@ -1,0 +1,16 @@
+<div class="driverStandings">
+    <h2>Driver Championship Standing</h2>
+    <h3>{{ year }} - Round {{ round }}</h3>
+    <table>
+        <tr>
+            <th>Pos.</th><th>Driver</th><th>Constructor</th><th>Points</th><th>Wins</th>
+        </tr>
+        <tr *ngFor = "let s of currentStandings; let i = index" class="whiteFont">
+            <td>{{ i + 1 }}</td>
+            <td><a routerLink="/driver/{{s.driverid}}" class="whiteFont">{{ s.driver | shortName }}</a></td>
+            <td><a routerLink="/team/{{s.teamid}}" class="whiteFont">{{ s.team }}</a></td>
+            <td>{{ s.total_points }}</td>
+            <td>{{ s.wins }}</td>
+        </tr>
+    </table>
+</div>

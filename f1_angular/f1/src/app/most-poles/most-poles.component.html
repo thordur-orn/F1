@@ -1,0 +1,9 @@
+<table class="statsTable">
+    <tr>
+        <th>Driver</th><th>Poles</th>
+    </tr>
+    <tr *ngFor="let p of poles">
+        <td><a routerLink="/driver/{{p.id}}">{{ p.forename }} {{ p.surname }}</a></td>
+        <td>{{ p.poles }}</td>
+    </tr>
+</table>

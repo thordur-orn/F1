@@ -1,0 +1,17 @@
+<div *ngIf="team" class="margin25">
+    <h2>{{team.name | uppercase}} details</h2>
+    <div><span>Nationality: </span>{{ team.nationality }}</div>
+    <div><span>Entries: </span>{{ team.entries }}</div>
+    <div><span>Wins: </span>{{ team.wins }}</div>
+    <div><span>Podiums: </span>{{ team.podiums }}</div>
+    <div><span>Total points: </span>{{ team.total_points }}</div>
+    <div><span><a href={{team.url}}>Wikipedia</a></span></div>
+</div>
+<div>
+    <button (click)="goBack()" class="f1Button">Go back</button>
+</div>
+
+<h2 class="margin25">{{ team.name }} F1 Championship Seasons</h2>
+<app-constructor-seasons></app-constructor-seasons>
+<h2 class="margin25">{{ team.name }} F1 Drivers</h2>
+<app-team-drivers></app-team-drivers>

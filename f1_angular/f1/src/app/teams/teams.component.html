@@ -1,0 +1,9 @@
+<div class="title f1Font bold">
+    <h2 class="whiteFont">Teams</h2>
+</div>
+<app-team-search></app-team-search>
+<ul class="teams">
+    <div *ngFor="let team of teams">
+        <div class="listPanel whiteFont f1Font" routerLink="/team/{{team.id}}">{{team.name}}</div>
+    </div>
+</ul>

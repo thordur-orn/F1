@@ -1,0 +1,14 @@
+<div *ngIf="driver" class="margin25">
+    <h2>{{driver.forename}} {{ driver.surname }} details</h2>
+    <div><span>Date of birth: </span>{{ driver.dob | date }}</div>
+    <div><span>Nationality: </span>{{ driver.nationality }}</div>
+    <div><span>Entries: </span> {{ driver.starts }}</div>
+    <div><span>Wins: </span> {{ driver.wins }}</div>
+    <div><span>Podiums: </span> {{ driver.podiums }}</div>
+    <div><span>Career points: </span> {{ driver.career_points }}</div>
+    <div><span>Fastest laps (since 2004): </span> {{ driver.fastest_laps }}</div>
+    <div><span><a href={{driver.url}}>Wikipedia</a></span></div>
+
+    <app-driver-seasons></app-driver-seasons>
+    <button (click)="goBack()" class="f1Button">Go back</button>
+</div>

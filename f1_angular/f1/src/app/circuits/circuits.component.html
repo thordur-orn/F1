@@ -1,0 +1,22 @@
+<div class="title f1Font bold">
+    <h2 class="whiteFont">Circuits</h2>
+</div>
+
+<ul class="circuits">
+    <div *ngFor="let circuit of circuits">
+        <div class="listPanel whiteFont f1Font" routerLink="/circuit/{{circuit.id}}">
+            {{ circuit.name }}
+        </div>
+    </div>
+</ul>
+  
+  <!--
+    <div>
+    <label id="new-driver">Driver name: </label>
+    <input for="new-driver" #driverName />
+  
+    <button class="add-button" (click)="add(driverName.value); driverName.value=''">
+      Add driver
+    </button>
+  </div>
+  -->

@@ -1,0 +1,34 @@
+<div id="controls" class="flexCol">
+    <div class="flexRow">
+        <button (click)="firstYear()" class="arrowButton">&#60;&#60;</button>
+        <button (click)="previousYear()" class="arrowButton">&#60;</button>
+        <select #year class="whiteFont f1Dropdown" (change)="changeYear(year.value)">
+            <option *ngFor="let y of years" [value]="y" class="f1Option whiteFont">
+                {{ y }}
+            </option>
+        </select>
+        <button (click)="nextYear()" class="arrowButton">&#62;</button>
+        <button (click)="lastYear()" class="arrowButton">&#62;&#62;</button>
+    </div>
+    <div class="flexRow">
+        <button (click)="firstRound()" class="arrowButton">&#60;&#60;</button>
+        <button (click)="decreaseRound()" class="arrowButton">&#60;</button>
+        <select #round class="whiteFont f1Dropdown" (change)="changeRound(round.value)">
+            <option *ngFor="let r of seasonResults.results" [value]="r.round" class="f1Option whiteFont">
+                {{ r.round }}
+            </option>
+        </select>
+        <button (click)="increaseRound()" class="arrowButton">&#62;</button>
+        <button (click)="lastRound()" class="arrowButton">&#62;&#62;</button>
+    </div>
+</div>
+
+<div class="flexRow">
+    <!-- <div class="listPanel collapsible"><h2 class="f1Font whiteFont">{{ selectedYear }} World Drivers' Championship standings</h2></div> -->
+    <app-driver-standings [year] = 'selectedYear' [round]='selectedRound'></app-driver-standings> <!--
+    <div class="listPanel collapsible"><h2 class="f1Font whiteFont">{{ selectedYear }} World Constructors' Championship standings</h2></div>
+    <app-constructor-standings [year] = 'selectedYear'></app-constructor-standings>
+    <h2>Season Results</h2> -->
+    <app-season-results #seasonResults [year] = 'selectedYear' [round]='selectedRound'></app-season-results>
+</div>
+

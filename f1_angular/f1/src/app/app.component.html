@@ -1,0 +1,19 @@
+<div id="title" class="f1Font whiteFont">
+    <h1><a routerLink="/dashboard" class="whiteFont">{{title}}</a></h1>
+</div>
+<div id="nav" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+    <nav>
+        <div class="navItem f1Font whiteFont" routerLink="/dashboard">Dashboard</div>
+        <div class="navItem f1Font whiteFont" routerLink="/drivers">Drivers</div>
+        <div class="navItem f1Font whiteFont" routerLink="/teams">Teams</div>
+        <div class="navItem f1Font whiteFont" routerLink="/standings/2020">Standings</div>
+        <div class="navItem f1Font whiteFont" routerLink="/circuits">Circuits</div> 
+        <div class="navItem f1Font whiteFont" routerLink="/statistics">Statistics</div>
+        <div class="navItem f1Font whiteFont" routerLink="/headtohead">Head-to-head</div>
+    </nav>
+</div>
+<router-outlet></router-outlet>
+
+<footer class="greyColor whiteFont f1Font">
+    Formula 1
+</footer>

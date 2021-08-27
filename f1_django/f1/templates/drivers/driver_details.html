@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    Name: {{ driver.forename }} {{ driver.surname }}<br>
+    Date of birth: {{ driver.dob }}<br>
+    Nationality: {{ driver.nationality }}
+
+    <table>
+        <tr>
+            <th>Season</th>
+            <th>Team</th>
+            <th>Points</th>
+            <th>Wins</th>
+            <th>Championship Position</th>
+        </tr>
+        {% for r in driver_results %}
+            <tr>
+                <td>{{ r.raceid.year }}</td>
+                <td>{{ r.raceid.constructorid.name }}</td>
+                <td>{{ r.points }}</td>
+                <td>{{ r.wins }}</td>
+                <td>{{ r.position }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {{ circuit.name }}<br>
+    {{ circuit.location }}<br>
+    {{ circuit.country }}<br>
+
+    <table>
+        <tr>
+            <th>Season</th>
+            <th>Winner</th>
+            <th>Constructor</th>
+        </tr>
+        {% for w in winners %}
+            <tr>
+                <td>{{ w.raceid.year }}</td>
+                <td><a href={% url "driver-details" w.driverid.id %}>{{ w.driverid }}</a></td>
+                <td>{{ w.constructorid }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

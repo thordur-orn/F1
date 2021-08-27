@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="title f1Font bold">
+        <h2 class="whiteFont">Circuits</h2>
+    </div>
+    <ul class="circuits">
+        {% for circuit in circuits %}
+            <a href={% url "circuit-details" circuit.id %}>
+                <div class="listPanel whiteFont f1Font">
+                    {{ circuit.name }}
+                </div>
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock %}

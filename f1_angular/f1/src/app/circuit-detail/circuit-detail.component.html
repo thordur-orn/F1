@@ -1,0 +1,11 @@
+<div *ngIf="circuit" class="margin25">
+    <h2>{{circuit.name}} details</h2>
+    <div><span>Location: </span>{{ circuit.location }}, {{ circuit.country }}</div>
+    <div><span>Lap record: </span>{{ circuit.lap_record }}, 
+        <a routerLink="/driver/{{circuit.rec_driverid}}">{{ circuit.rec_forename }} {{ circuit.rec_surname }}</a>,
+        <a routerLink="/standings/{{circuit.rec_year}}">{{ circuit.rec_year }}</a></div>
+    <div><span><a href={{circuit.url}}>Wikipedia</a></span></div>
+    <button (click)="goBack()" class="f1Button">Go back</button>
+</div>
+
+<app-circuit-winners></app-circuit-winners>

@@ -1,0 +1,10 @@
+<table class="statsTable">
+    <tr>
+        <th>Driver</th>
+        <th>Entries</th>
+    </tr>
+    <tr *ngFor="let m of mostEntries">
+        <td><a routerLink="/driver/{{m.id}}">{{ m.forename }} {{ m.surname }}</a></td>
+        <td>{{ m.starts }}</td>
+    </tr>
+</table>

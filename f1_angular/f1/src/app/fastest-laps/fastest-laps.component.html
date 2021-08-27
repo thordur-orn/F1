@@ -1,0 +1,9 @@
+<table class="statsTable">
+    <tr>
+        <th>Driver</th><th>Fastest Laps</th>
+    </tr>
+    <tr *ngFor="let f of fastestLaps">
+        <td><a routerLink="/driver/{{f.id}}">{{ f.forename }} {{ f.surname }}</a></td>
+        <td>{{ f.fastest_laps }}</td>
+    </tr>
+</table>

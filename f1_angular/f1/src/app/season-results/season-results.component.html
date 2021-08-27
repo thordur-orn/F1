@@ -1,0 +1,24 @@
+<div *ngIf="results">
+    <div class="whiteFont">
+        <div class="font10px">Round {{ selectedRoundResult.round }} - {{ selectedRoundResult.racename }}</div>
+        <div class="font10px"><a routerLink="/circuit/{{selectedRoundResult.circuitid}}" class="whiteFont">{{ selectedRoundResult.circuit }}</a>, {{ selectedRoundResult.location }}, {{ selectedRoundResult.country }}</div>
+        <div class="font10px">{{ selectedRoundResult.date | date }}</div>
+    </div>
+    <div class="seasonResults">
+        <table class="whiteFont">
+            <tr>
+                <th>Pos.</th><th>Driver</th><th>Constructor</th><th>Grid</th><th>Time</th><th>Status</th><th>Laps</th><th>Points</th>
+            </tr>
+            <tr *ngFor="let d of selectedRoundResult.results">
+                <td>{{ d.position }}</td>
+                <td><a routerLink="/driver/{{d.driverid}}" class="whiteFont">{{ d.driver }}</a></td>
+                <td><a routerLink="/team/{{d.teamid}}" class="whiteFont">{{ d.team }}</a></td>
+                <td>{{ d.grid }}</td>
+                <td>{{ d.timems | raceTime }}</td>
+                <td>{{ d.status }}</td>
+                <td>{{ d.laps }}</td>
+                <td>{{ d.points }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

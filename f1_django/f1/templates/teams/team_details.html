@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <strong>Name: {{ team.name }}</strong><br>
+    <strong>Nationality: {{ team.nationality }}</strong><br>
+    <table>
+        <tr>
+            <th>Season</th>
+            <th>Points</th>
+            <th>Wins</th>
+            <th>Championship Position</th>
+        </tr>
+        {% for r in team_results %}
+            <tr>
+                <td>{{ r.raceid.year }}</td>
+                <td>{{ r.points }}</td>
+                <td>{{ r.wins }}</td>
+                <td>{{ r.position }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <strong>All drivers for {{ team.name }}:</strong><br>
+        {% for d in team_drivers %}
+            <a href={% url "driver-details" d.driverid.id %}>{{ d.driverid }}</a><br>
+        {% endfor %}
+{% endblock %}

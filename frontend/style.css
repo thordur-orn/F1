@@ -1,0 +1,160 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+table {
+    font-family: 'Titillium Web', sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    border: 1px solid white;
+}
+
+#tableArea{
+    margin: auto;
+    position: center;
+    width: 95%;
+}
+
+td, th {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #333240;
+}
+
+tr:nth-child(odd) {
+    background-color: black;
+}
+
+a{
+    color: black;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: auto;
+}
+
+.f1Button{
+    background-color: #FF1801;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.f1Button:active{
+    background-color: #B21101;
+    outline: none;
+}
+
+#dropdown{
+    padding-right: 15px;
+    border: none;
+    padding-top: 15px;
+}
+
+.greyColor{
+    background-color: #333240
+}
+
+.blackColor{
+    background-color: black;
+}
+
+.whiteFont{
+    color: white;
+}
+
+#year{
+    width: 100px;
+    height: 40px;
+    border-radius: 1px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+#controls{
+    margin: auto;
+    width: 90%;
+    height: 75px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    display: flex;
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 5px;
+    flex-direction: column;
+    cursor: pointer;
+    padding-top: 10px;
+    height: 120px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    margin: 5px;
+}
+
+.standings{
+    margin-top: auto;
+}
+
+.marginLeft10px{
+    margin-left: 10px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: rgba(128, 128, 128, 0.267);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 15px 18px;
+    width: 95%;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
+
+br {
+    display: block;
+    height: 5px;
+}
+
+.racename {
+    padding: 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

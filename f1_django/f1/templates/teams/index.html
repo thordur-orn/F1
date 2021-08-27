@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="title f1Font bold">
+        <h2 class="whiteFont">Constructors</h2>
+    </div>
+    <ul class="circuits">
+        {% for team in teams %}
+            <a href={% url "team-details" team.id %}>
+                <div class="listPanel whiteFont f1Font">
+                    {{ team.name }}
+                </div>
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock %}

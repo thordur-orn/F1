@@ -1,0 +1,12 @@
+<div id="search-component" class="margin25">
+    <label for="search-box">Driver Search</label>
+    <input #searchBox id="search-box" autocomplete="off" (input)="search(searchBox.value)" />
+  
+    <ul class="search-result">
+      <li *ngFor="let driver of drivers$ | async" >
+        <a routerLink="/driver/{{driver.id}}">
+          {{driver.forename + ' ' + driver.surname}}
+        </a>
+      </li>
+    </ul>
+</div>
